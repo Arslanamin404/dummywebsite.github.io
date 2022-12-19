@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover-dropdown</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    background-color: black;
+    overflow: auto;
+    width: 100vw;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;     
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+    font-family:monospace;
+    font-size: 26px;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 32px;
+    transition: 0.2s;
+    color: red;
+}
+nav ul li ul.dropdown{
+    background-color:#2e2c2c;
+    display: none;
+    position: absolute;
+}
+nav ul li:hover ul.dropdown{
+    display:flex;
+    /* flex-direction: column; THIS CHANGES DIRECTION OF DROP DOWN */
+}
+nav ul li ul.dropdown li{
+    display:flex;
+    flex-direction: column;
+}
+main{
+    text-align: justify;
+    font-size: 22px;
+    padding: 30px 80px;
+    line-height: 34px;
+}
+span{
+    background-color:rgb(246, 127, 248) ;
+    font-style: italic;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Products</a>
+                     <ul class="dropdown">
+                         <li><a href="#">Laptops</a></li>
+                         <li><a href="#">Monitors</a></li>
+                        <li><a href="#">Printers</a></li>
+                    </ul>
+            </li>
+            <li><a href="mailto:arslanamin.org@gmail.com">Mr. Mohammad Arsalan Rather</a></li>
+            <li><a href="https://instagram.com/_.arsl_an">Contact</a></li>
+        </ul>
+    </nav>
+    <main> 
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, magnam temporibus? Dignissimos, a blanditiis? Suscipit earum ducimus veniam explicabo commodi sit repudiandae nam aliquam, dolorem laborum blanditiis et voluptatem rerum saepe laudantium! Odio aspernatur corrupti unde veniam, eos dolores corporis quia officiis ratione aliquid earum repellendus incidunt aperiam officia blanditiis vel accusantium voluptatum quam error saepe placeat. Ducimus et vero eius laudantium officia odit itaque, nostrum dignissimos tempore ullam architecto consequatur suscipit eveniet harum? Accusamus quisquam itaque necessitatibus a asperiores tenetur, et voluptas blanditiis facere consequuntur cupiditate unde nesciunt quos veniam consequatur at eaque ipsam aspernatur nam autem qui eos fugiat animi. Laborum quos ut consectetur ipsa facere! Hic sint impedit reiciendis minus iste at quaerat porro? Id, dolores tempore consequuntur quos repellat iusto porro earum necessitatibus, inventore eligendi doloremque quas aperiam magni dicta dolor neque qui expedita eaque? <span> Magnam dicta similique autem numquam inventore dolor, fugit sunt expedita molestiae hic, amet harum porro unde beatae saepe minus est dolores recusandae vel eveniet optio aperiam! Ipsam dicta blanditiis praesentium expedita velit quod repellendus cum obcaecati unde nisi veniam dolorum, eaque dolor iure quia! Sint a accusantium veritatis nemo, praesentium totam.</span> Ducimus itaque natus quisquam mollitia modi autem quidem ab deserunt, aliquid, iure similique distinctio error cupiditate rerum nisi esse quis, eligendi aliquam eius atque impedit magnam aspernatur! Nesciunt minus exercitationem consectetur id amet, ipsam architecto suscipit perspiciatis dolore? Voluptas autem nostrum aliquid, labore placeat possimus quas facilis quidem a ab laudantium iusto saepe necessitatibus molestias quo ut dolor doloremque cum magnam expedita numquam vitae quia delectus? Eos odio iure atque ipsum illo dolore doloremque blanditiis pariatur voluptatum exercitationem. Recusandae ipsa dolorem, quas aliquam dolores tempore incidunt ipsum quos obcaecati nemo dolorum voluptates ipsam architecto minima dignissimos alias et. Cumque fugiat eveniet accusantium quis corrupti vitae, assumenda neque porro quae esse nemo minima cum harum amet iusto. Hic, sequi delectus deleniti incidunt quibusdam quos cumque temporibus possimus quis esse labore, magnam a iusto veniam consectetur sed fuga veritatis quidem. Nulla dolor odio quam distinctio nemo ad dolorem suscipit assumenda, sequi et impedit deserunt corporis molestiae ut quis sapiente obcaecati in, doloremque libero dignissimos ab voluptas. Quidem accusantium consequatur excepturi ut dignissimos nobis modi quas non delectus tempore reprehenderit nisi nesciunt molestiae adipisci expedita quibusdam, odit repellat temporibus. Distinctio aliquid ad iusto est? Dolorem, veniam iste. Officiis culpa eligendi aliquam, quibusdam ullam ut quisquam eveniet, nihil maiores hic enim? Debitis, nihil voluptate!
+    </main>
+</body>
+</html>

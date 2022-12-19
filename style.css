@@ -1,0 +1,307 @@
+@font-face {
+    font-family: AQUIRE;
+    src: url(../Fonts/AQUIRE/AquireBold-8Ma60.otf);
+}
+ @font-face {
+    font-family: Autography;
+    src: url(../Fonts/Autography/Autography.otf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:Playfair ;
+    src: url(../Fonts/Playfair/PlayfairDisplaySC-Black.ttf);
+    font-family:Aquatico ;
+    src: url(../Fonts/Aquatico/Aquatico-Regular.otf);
+}
+ @font-face {
+    font-family:Munich;
+    src: url(../Fonts/Munich/MUNICH\ SANS.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../Fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family:Cheorcy ;
+    src: url(../Fonts/Cheorcy/Cheorcy-axmaJ.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flexcontainer{
+    background-color:#333333;
+    padding: 5px 0px;
+    width: 100vw;
+}
+
+nav{
+    display: flex;
+    justify-content:end;
+    overflow: auto;
+    width: 100vw;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;     
+}
+nav ul li{
+    float: left;
+}
+.name {
+    position:absolute;
+    margin-left:10px ;
+    padding: 0px 20px;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-family: "AQUIRE";
+}
+.name a{
+    color: white;
+    text-decoration: none;
+}
+.name h1::first-letter{
+    font-family: "Autography";
+    font-size: 46px;
+    font-weight:1000;
+    color: red;
+}
+nav ul li a{
+    align-content: center;
+    display: block;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+    font-family:"Aquatico";
+    font-size: 18px;
+}
+nav ul li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 22px;
+    font-weight: bolder;
+    transition: 0.5s;
+    color: orange;
+}
+main{
+    margin-top: 70px;
+    margin: 70px 240px;
+}
+main p.title{
+    color: #E8492E;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.875rem;
+    letter-spacing: 0.170625rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: "Munich";
+}
+main h2{
+    margin: 15px 80px 45px 0px;
+    color: #525151;
+    font-family: "Montserrat";
+    font-size: 55px;
+    letter-spacing: 2px;
+    font-weight: 550;
+}
+main div.content img{
+    width: 850px; 
+    margin-top:22px;
+    margin-bottom:25px;
+}
+h3{
+    color: #E8492E;
+    font-family:"Aquatico" ;
+    font-size: 35px;
+    font-weight: 100;
+    margin: 100px 0px 60px;
+}
+.main-content{
+    color: #525151;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 38px;
+    margin: 0px 0px 20px;   
+}
+strong{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #3e3d3d;
+    font-size: 18px;
+}
+.main-content a{
+    text-decoration: none;
+    color: #e13617;
+}
+.main-content a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+span{
+    text-decoration: underline;
+    font-weight: bold;
+}
+ol li{
+    color: #242323;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 38px;
+    margin: 0px 0px 0px 50px;
+}
+footer{
+    background-color:#333333;
+}
+footer ul{
+    display: flex;
+    list-style:none;
+}
+footer ul li a{
+    display: block;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: white;
+    font-family:"Aquatico";
+    font-size: 18px;
+}
+footer ul li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 22px;
+    font-weight: bolder;
+    transition: 0.5s;
+    color: orange;
+}
+@media only screen and (min-width:300px) and (max-width:768px) {
+    nav{
+        display: flex;
+        justify-content:space-between;
+        overflow: auto;
+        width: 100vw;
+    }
+    .flexcontainer{
+        background-color:#333333;
+        width: 100vw;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;     
+    }
+    .name {
+        position:absolute;
+        padding: 0px 0px;
+        color: white;
+        font-size: 10px;
+        font-family: "AQUIRE";
+    }
+    .name h1::first-letter{
+        font-family: "Autography";
+        font-size: 20px;
+        font-weight:600;
+        color: red;
+    }
+    nav ul li a{
+        display:flex;
+        flex-direction: column;
+        padding: 38px 17px 10px;
+        text-decoration: none;
+        color: white;
+        font-family:"Aquatico";
+        font-size: 10px;
+    }
+    nav ul li a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 11px;
+        font-weight:100;
+        transition: 0;
+        color: orange;
+    }
+    
+    main{
+        margin: 10px 10px;
+    }
+    main p.title{
+        color: #f42c08;
+        font-size: 32px;
+        font-weight: bolder;
+        letter-spacing: 0.170625rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-family: "Munich";
+    }
+     main h2{
+        margin: 10px 20px 15px 0px;
+        color: #111010;
+        font-family: "Montserrat";
+        font-size: 22px;
+        letter-spacing: 2px;
+        font-weight: 550;
+    }
+    main div.content img{
+        width: 300px; 
+        margin:15px 35px;
+    }
+    h3{
+        color: orangered;
+        font-family:"Aquatico" ;
+        font-size: 26px;
+        font-weight: bolder;
+        margin: 15px 0px 18px;
+    }
+    .main-content{
+        color: black;
+        font-family: "Roboto";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 34px;
+        margin: 0px 0px ;   
+    }
+    strong{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: #3e3d3d;
+        font-size: 15px;
+    }
+    .main-content a{
+        text-decoration: none;
+        color: #E8492E;
+    }
+    .main-content a:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    span{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    footer{
+        background-color:#333333;
+    }
+    footer ul{
+        display: flex;
+        list-style:none;
+    }
+    footer ul li a{
+        display: block;
+        padding: 20px 11px;
+        text-decoration: none;
+        color: white;
+        font-family: "Aquatico";
+        font-size: 11px;
+    }
+    footer ul li a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 6px;
+        font-weight: 100;
+        color: orange;
+    }
+}

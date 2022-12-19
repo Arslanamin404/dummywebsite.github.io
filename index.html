@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS vw and vh Units: Are They Worth Using Yet?-FutureGen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Future-Gen-logos_transparent.png" sizes="60x60"  type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="flexcontainer">
+            <div class="name">
+                <h1> <a href="https://instagram.com/_.arsl_an"> Future Gen</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://instagram.com/_.arsl_an">Home</a></li>
+                    <li><a href="mailto:arslanamin.org@gmail.com">Mr. Mohammad Arsalan Rather</a></li>
+                    <li><a href="https://wa.me/917780880146">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <p class="title">Blog</p>
+        <h2>CSS vw and vh Units: Are They Worth Using Yet?</h2>
+        <div class="content"><img src="thumbnail1.jpeg" alt="Future-Gen"></div>
+        <h3>An Introduction </h3>
+        <p class="main-content">Amongst the newer responsive CSS selectors, my favorites are definitely vw (Viewport Width) and vh (Viewport Height). A lot of web designs that have come my way call for full page layouts with no containing max-width and no overflow of content that requires scrolling to view. These designs also feature vertical boxes that should collectively be visible within the viewport at the same time regardless of the browser’s height when scaled responsively. When researching to find a CSS solution to this, I stumbled upon the vh/vw units.
+        <br><br>
+         Figuring out your exact vh/vw measurement is as easy as figuring out your layout in terms of percentage. 100vw is equal to 100% of the viewport’s calculated width. 25vh is equal to 25% of the viewport’s calculated height. The key advantage to using these new units over using percentages is that it calculates the dimensions of the elements relative to the dimensions of the viewport. Before, this was not possible to do without manually calculating the dimensions of the viewport using javascript and then dividing by the percentage of space that you want the contained elements’ dimensions to take up. Here is an example of what I mean:</p>
+        
+         <strong><em>Layout Effect on Desktop</em></strong>
+        <div class="content"><img src="desktop-example.jpeg" alt="Future-Gen"></div>
+        <strong><em>Same Layout Effect on Mobile Device</em></strong>
+        <div class="content"><img src="mobile-example.jpeg" alt="Future-Gen"></div>
+
+        <p class="main-content">I was developing primarily using Chrome and found that all of my declarations were looking and functioning beautifully. The layout also maintained its proper relative dimensions when the viewport was scaled responsively. I noticed similar positive results on Safari and Firefox as well and I was elated that I might have found 
+        a simple solution. And then I did mobile testing…</p>
+        
+        <h3>The Inevitable Browser Problems</h3>
+
+        <p class="main-content">The expected lack of browser support applied primarily to mobile browsers in this case. I noticed it failing to work on my IOS simulator, as well as my iPod/iPhone with software updated to 7.0.1. It worked no better on my Android smartphone. The unit of measure was simply not recognized, rendering my perfectly calculated layout an indiscriminate cluster of ugliness and left me crestfallen as I went back to the drawing board. At the time that this post is being written, the browser support includes, according to <a href="https://caniuse.com/?search=vh"> caniuse.com</a>, Chrome, Safari, Opera, Firefox, and only the 2 most recent software versions of Android. The units partially work on IOS Safari, Blackberry Browser, and IE. They do not work at all on Opera Mini or older versions of Safari and Android. Also according to this site’s information (just to put things into perspective), the partially supported browsers only account for 20.28% of the total 75.92% of full support for these CSS measurement units so I wouldn’t put much stock into them. This all was enough to give me a headache and to force me to find an alternative solution.</p>
+        
+        <h3>The Solution</h3>
+        <p class="main-content">The obvious fallback for vw is simple percentages. IE: using “width: 100%” instead of “width: 100vw”. As much as I would have loved to have given my div a height of 100% and have called it a day, the solution for the height issue was a little more involved as the viewport needs to know how tall it is in the first place before it can divide and conquer the percentage heights if its contents.
+            <br><br>
+        Here is an example of a vw/vh situation and its javascript equivalent: Let’s say we have four divs that are supposed to equal the entire width of the browser while consistently equaling 1/4th of the browser’s height, no matter what the browser’s height is, like so:</p>
+        <p class="main-content"><span> Layout using vw/vh</span>
+            <br>
+            <strong> css:</strong>
+            <br>
+            div &nbsp; {
+                 <br>
+                 &nbsp; &nbsp; &nbsp; &nbsp; width: 100vw; 
+                 <br>
+                 &nbsp; &nbsp; &nbsp; &nbsp; height: 25vh;
+                 <br>
+            }
+            <br>        
+            <span> Same layout using Javascript</span>
+            <br>
+            <strong> css:</strong>
+            <br>
+            div &nbsp;{
+                <br>
+                &nbsp; &nbsp; &nbsp; &nbsp; width: 100%;
+                <br>
+            }
+            <br>
+            <strong> Javascript:</strong> <br>
+            $(‘div’).height($(window).height() / 4);</p>
+            
+            <h3>What to make of this</h3>
+            <p class="main-content">
+                At this point it’s clear that until more people are using devices with updated software, there are 3 ways to implement this CSS technique:</p>
+                <br>
+                <ol> 
+                    <li>Use vw/vh and set fixed dimensions for the divs at mobile breakpoints to keep code simple.</li>
+                    <li>Use vw/vh but set javascript fallbacks to step in when the correct dimensions are not recognized by older browser versions and mobile devices.</li>
+                    <li>Skip vw/vh and set the dimensions using javascript only.</li>
+                </ol>
+                <p class="main-content">
+                    The only caveat to calculating this via javascript is if the user has javascript disabled, although it’s more likely for people to have outdated browsers than for that to occur. I really love what these units are trying to accomplish and I think that once either the majority of people update their browsers, or older browsers start supporting these units, this is a very quick and easy way to accomplish this layout effect while keeping your javascript files less cluttered.
+                </p>
+    </main>
+            <footer class="footer">
+                <ul>
+                    <li><a href="#">&copy; 2022 Future Gen</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </footer>
+</body>
+</html>
